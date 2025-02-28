@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="form-title">Удалить пост</h1>
+  <p class="form-delete">Вы уверены, что хотите удалить "{{post.dis_title}}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="form-button">Да, удалить</button>
+    <a class="reject-link" href="{{ post.get_absolute_url }}">Отмена</a>
+  </form>
+{% endblock %}

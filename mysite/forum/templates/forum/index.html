@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>{{title}}</h1>
+
+<ul>
+    {%for p in posts%}
+            <li class="catposts">
+               <div class="wrapper">
+                   {%if p.post_icon%}
+                            <p><img class="img-article-left thumb" src="{{p.post_icon.url}}"></p>
+                   {%endif%}
+                    <h2>{{p.dis_title}}</h2>
+                    <p class="pubdate">{{p.pub_date}}</p>
+               </div>
+                <p>{{p.dis_text}}</p>
+                <p class="readbutton"><a href="{{p.get_absolute_url}}">Открыть пост</a></p>
+                {%if not forloop.last %}
+                    <hr>
+                {%endif%}
+            </li>
+    {%endfor%}
+</ul>
+{%endblock%}
+{%block navigation%}
+{%if page_obj.has_other_pages %}
+<nav class = "list-pages">
+    <ul>
+        {% for p in paginator.page_range %}
+        {% if page_obj.number == p %}
+        <li class="page num page-num-selected">{{p}}</li>
+        {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+        <li class="page-num">
+            <a href="?page={{p}}">{{p}}</a>
+        </li>
+        {%endif%}
+        {%endfor%}
+    </ul>
+</nav>
+{%endif%}
+{%endblock%}

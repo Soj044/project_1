@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>Profile</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {% if user.photo %}
+    <p><img class="img-article-left" src="{{ user.photo.url }}">
+    {%else%}
+    <p><img src="{{default_image}}">
+    {%endif%}
+
+    <div class="forms-error">{{form.non_field_errors}}</div>
+    {%for f in form%}
+    <p><label class="forms-label" for="{{ f.id_for_label }}">{{f.label}}</label>{{f}}</p>
+    <div class="forms-error">{{f.errors}}</div>
+    {%endfor%}
+
+    <p>
+        <button type="submit" class="form-button">Save</button>
+    </p>
+
+</form>
+
+<hr>
+<p class="password-change-form"><a href="{% url 'users:password_change' %}">Change password</a></p>
+
+{%endblock%}

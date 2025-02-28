@@ -1,0 +1,38 @@
+{%load static%}
+{%load forum_tags%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link type="text/css" href="{% static 'forum/css/style.css'%}" rel="stylesheet">
+</head>
+<body>
+<ul class="header_first_line">
+    {% if cat_selected == 0 %}
+        <li class="selected">Главная страница</li>
+    {%else%}
+        <li class="menu"><a href="{%url 'index'%}">Главная страница</a></li>
+    {%endif%}
+    {%for m in mainmenu%}
+        <li class="menu"><a href="{%url m.url_name%}">{{m.title}}</a></li>
+    {%endfor%}
+    {% if user.is_authenticated %}
+    <li class="last"><a href="{%url 'users:profile'%}">{{user.username}}</a> | <a href="{% url 'users:logout' %}">Exit</a></li>
+    {%else%}
+    <li class="last"><a href="{%url 'users:login'%}">Login</a> | <a href="{%url 'users:register'%}">Register</a></li>
+    {%endif%}
+</ul>
+<ul class="header_second_line">
+    {% if request.resolver_match.url_name == 'addpost' %}
+        <li class="selected">Добавить статью</li>
+    {% else %}
+        <li class="menu"><a href="{% url 'addpost' %}">Добавить статью</a></li>
+    {% endif %}
+    {% show_categories cat_selected %}
+</ul>
+    {%block content%}{%endblock%}
+{%block navigation%}{%endblock%}
+</body>
+</html>

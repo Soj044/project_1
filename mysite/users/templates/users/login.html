@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>Authorization</h1>
+
+<form method="post">
+    {%csrf_token%}
+    <div class="forms-error">{{form.non_field_errors}}</div>
+    {%for f in form%}
+    <p><label class = "forms-label" for="{{ f.id_for_label }}">{{f.label}}</label>{{f}}</p>
+    <div class="forms-error">{{f.errors}}</div>
+    {%endfor%}
+    <p><button type="submit">Enter</button></p>
+
+    <p><a href="{% url 'users:password_reset'%}">idiot, did you forget your password?</a></p>
+</form>
+{%endblock%}

@@ -1,0 +1,9 @@
+<!--ТУТ ПРОПИСАНЫ КАТЕГОРИИ С ПОМОЩЬЮ ВКЛЮЧАЮЩЕГО ТЕГА-->
+
+{% for cat in cats%}
+    {%if cat.id == cat_selected%}
+        <li class="selected">{{cat.name}}</li>
+    {%else%}
+        <li class="category"><a href="{{ cat.get_absolute_url }}">{{cat.name}}</a></li>
+    {%endif%}
+{%endfor%}

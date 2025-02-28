@@ -1,0 +1,299 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стили для первой линии заголовка */
+.header_first_line {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.header_first_line li {
+    margin: 0 10px;
+}
+
+.header_first_line li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header_first_line .selected {
+    font-weight: bold;
+    color: #009900;
+}
+
+.selected {
+    font-weight: bold;
+    color: #009900;
+}
+
+img.img-article-left {
+	max-width: 200px;
+	height: auto;
+}
+
+.header_second_line .menu a:active {
+    color: #009900;
+}
+
+/* Стили для второй линии заголовка */
+.header_second_line {
+    background-color: #555;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.header_second_line li {
+    margin: 0 10px;
+}
+
+.header_second_line li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Стили для постов */
+.catposts {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.catposts h2 {
+    margin: 0 0 10px 0;
+}
+
+.catposts p {
+    margin: 0 0 10px 0;
+}
+
+.readbutton a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.readbutton a:hover {
+    background-color: #45a049;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.wrapper h2{
+    margin: 0;
+}
+
+.wrapper .pubdate{
+    margin: 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+p div {
+    text-align: right;
+    margin-right: 3px;
+}
+
+/* Стили для разделителей */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Стили для заголовка формы */
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Стили для формы */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Стили для подписей полей */
+.forms-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Ошибки формы */
+.forms-error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопки отправки */
+.form-button {
+    display: block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для кнопки отмены */
+.reject-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Стили для ссылки смены пароля */
+.password-change-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.password-change-form a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.password-change-form a:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.reject-link:hover {
+    text-decoration: underline;
+}
+
+/* Стили для сообщения об удалении */
+.form-delete {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #d9534f;
+}
+
+/* Стили для about*/
+/* Общие стили для блока "about" */
+/* Единый шрифт для всего содержимого */
+
+.highlight {
+    font-family: "Arial", sans-serif;
+}
+
+/* Стили для блока "about" */
+.about {
+    background-color: #A1A1A1;
+    padding: 10px;
+    /* Убираем границы и тени */
+    border: none;
+    box-shadow: none;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Заголовок h1 внутри блока about */
+.about h1 {
+    text-align: center;
+    color: #009900;
+    margin-bottom: 20px;
+}
+
+/* Стили для выделенного текста .highlight */
+.highlight {
+    padding: 5px;
+    border-radius: 3px;
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Стили для списка в блоке about */
+.about-ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.about-ul li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Стили для ссылок в блоке about */
+.about a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+

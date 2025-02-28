@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>{{post.dis_title}}</h1>
+
+{%if post.post_icon%}
+<p><img class="img-article-left" src="{{post.post_icon.url}}"></p>
+{%endif%}
+
+{{post.dis_text|linebreaks}}
+{%endblock%}

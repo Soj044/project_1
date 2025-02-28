@@ -1,0 +1,18 @@
+#header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+div.breadcrumbs {
+    background: #6A6E5D;
+}
+.module caption {
+    background-color: #009900;
+}
+
+#changelist-filter h2{
+    background-color: #009900;
+}
