@@ -295,5 +295,69 @@ select {
     color: #0056b3;
     text-decoration: underline;
 }
+/* Footer с соцсетями */
+.social-footer {
+    background-color: #333333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Иконки соцсетей */
+.social-icon {
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* GitHub */
+.github {
+    background-color: #333;
+}
+
+.github:hover {
+    background-color: #666;
+}
+
+/* Twitter */
+.twitter {
+    background-color: #1DA1F2;
+}
+
+.twitter:hover {
+    background-color: #0d8bf0;
+}
+
+/* LinkedIn */
+.linkedin {
+    background-color: #0077B5;
+}
+
+.linkedin:hover {
+    background-color: #005f8d;
+}
+
+/* Telegram */
+.telegram {
+    background-color: #0088cc;
+}
+
+.telegram:hover {
+    background-color: #006fa1;
+}
+
 
 
